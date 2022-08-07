@@ -16,3 +16,6 @@
   color: var(--color-secondary);
   transform: scale(0.98);
 }
+.NavItem-active {
+  color: var(--color-secondary);
+}

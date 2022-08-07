@@ -3,9 +3,16 @@ import NavItem from './NavItem';
 import { items } from './utils/starter';
 import './styles/Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ activeItem, activateItem }) => {
   const itemList = items.map((item) => {
-    return <NavItem name={item.name} key={item.name} />;
+    return (
+      <NavItem
+        active={item.name === activeItem.name}
+        activateItem={activateItem}
+        name={item.name}
+        key={item.name}
+      />
+    );
   });
   return <div className="Navbar">{itemList}</div>;
 };
