@@ -1,4 +1,4 @@
-export let generateIpsum = (pool) => {
+export const generateIpsum = (pool) => {
   const pars = 5;
   const sents = 5;
   let newIpsum = [];
@@ -11,4 +11,14 @@ export let generateIpsum = (pool) => {
     newPar = '';
   }
   return newIpsum;
+};
+export const findItem = (newName, items) => {
+  let newItem;
+  for (let item of items) {
+    if (item.name === newName) {
+      newItem = item;
+      break;
+    }
+  }
+  return newItem;
 };

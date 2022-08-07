@@ -1,29 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Carousel from './Carousel';
 import Ipsum from './Ipsum';
 import Navbar from './Navbar';
 import { items } from './utils/starter';
-import { generateIpsum } from './utils/helpers';
+import { generateIpsum, findItem } from './utils/helpers';
 import './styles/App.css';
 
 function App() {
   const [activeItem, setActiveItem] = useState(items[0]);
-  const [ipsum, seIpsum] = useState(generateIpsum(activeItem.ipsumPool));
-
-  let findItem = (newName) => {
-    let newItem;
-    for (let item of items) {
-      if (item.name === newName) {
-        newItem = item;
-        break;
-      }
-    }
-    return newItem;
-  };
+  const [ipsum, setIpsum] = useState(generateIpsum(activeItem.ipsumPool));
 
   let activateItem = (newName) => {
-    setActiveItem(findItem(newName));
+    setActiveItem(findItem(newName, items));
   };
+
+  let refreshIpsum = () => {
+    setIpsum(generateIpsum(activeItem.ipsumPool));
+  };
+
+  useEffect(() => setIpsum(generateIpsum(activeItem.ipsumPool)), [activeItem]);
 
   return (
     <div className="App">
@@ -39,7 +35,9 @@ function App() {
         <div>
           <div className="button__container">
             <button className="button button-copy">Copy All</button>
-            <button className="button button-refresh">Refersh</button>
+            <button className="button button-refresh" onClick={refreshIpsum}>
+              Refersh
+            </button>
           </div>
           <Ipsum ipsum={ipsum} />
         </div>
