@@ -1,0 +1,60 @@
+.App {
+  background-color: lightcoral;
+  max-width: 1650px;
+  min-width: 375px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+}
+.header {
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.subheader {
+  color: var(--color-tertiary);
+  font-style: italic;
+  margin-top: 3.2rem;
+  margin-bottom: 0;
+}
+.button__container {
+  margin-bottom: 2rem;
+}
+.button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: 0;
+  margin-right: 2.4rem;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.button:hover,
+.button:focus,
+.button:active {
+  outline: none;
+}
+.button:active {
+  transform: scale(0.98);
+}
+.button-copy {
+  color: var(--color-bg);
+  background-color: var(--color-secondary);
+  padding: 3px 8px;
+  width: 90px;
+}
+.button-copy:hover {
+  background-color: var(--color-tertiary);
+}
+.button-refresh {
+  color: var(--color-tertiary);
+}
+.button-refresh:hover {
+  color: var(--color-secondary);
+}
