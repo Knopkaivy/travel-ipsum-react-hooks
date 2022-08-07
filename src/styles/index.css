@@ -2,7 +2,7 @@
 
 :root {
   /* vars */
-  --color-primary: #414141;
+  --color-primary: #000;
   --color-secondary: #e92800;
   --color-tertiary: #60686e;
   --color-bg: #fbf3ed;
@@ -14,14 +14,19 @@
   padding: 0;
   box-sizing: inherit;
 }
+::selection {
+  color: var(--color-bg);
+  background: var(--color-secondary);
+}
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
 body {
   font-family: 'Josefin Sans', sans-serif;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   font-size: 1.6rem;
+  color: var(--color-primary);
   background-color: var(--color-bg);
   width: 100vw;
   height: 100vh;

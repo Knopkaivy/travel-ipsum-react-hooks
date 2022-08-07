@@ -1,3 +1,23 @@
+.Ipsum__container {
+  overflow-y: scroll;
+}
+.Ipsum__container::-webkit-scrollbar {
+  display: none;
+}
+
 .Ipsum {
-  background-color: plum;
+  min-width: 300px;
+  max-width: 550px;
+  line-height: 3.2rem;
+  height: 60vh;
+  margin: 0;
+  text-align: justify;
+}
+
+.Ipsum p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
