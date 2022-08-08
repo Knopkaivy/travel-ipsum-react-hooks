@@ -10,9 +10,17 @@ import './styles/App.css';
 function App() {
   const [activeItem, setActiveItem] = useState(items[0]);
   const [ipsum, setIpsum] = useState(generateIpsum(activeItem.ipsumPool));
+  const [copied, setCopied] = useState(false);
 
   let activateItem = (newName) => {
     setActiveItem(findItem(newName, items));
+  };
+
+  let copyAll = () => {
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
 
   let refreshIpsum = () => {
@@ -34,7 +42,11 @@ function App() {
         </div>
         <div>
           <div className="button__container">
-            <button className="button button-copy">Copy All</button>
+            <CopyToClipboard text={ipsum} onCopy={copyAll}>
+              <button className="button button-copy">
+                {copied ? 'Copied' : 'Copy All'}
+              </button>
+            </CopyToClipboard>
             <button className="button button-refresh" onClick={refreshIpsum}>
               Refersh
             </button>
