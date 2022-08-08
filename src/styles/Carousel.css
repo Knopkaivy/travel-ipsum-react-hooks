@@ -1,7 +1,8 @@
 .Carousel {
   min-width: 300px;
   max-width: 720px;
-  width: 40vw;
+  flex-basis: 50%;
+  /* width: 40vw; */
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -18,4 +19,20 @@
   width: 100%;
   height: 100vh;
   object-fit: cover;
+}
+@media screen and (max-width: 1200px) {
+  .Carousel,
+  .Carousel__inner,
+  .Carousel__item {
+    height: 76vh;
+  }
+  .Carousel {
+    align-self: center;
+    margin-left: 4rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .Carousel {
+    display: none;
+  }
 }

@@ -3,3 +3,8 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+@media screen and (max-width: 992px) {
+  .Navbar {
+    justify-content: center;
+  }
+}

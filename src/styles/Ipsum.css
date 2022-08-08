@@ -11,6 +11,7 @@
   line-height: 3.2rem;
   height: 60vh;
   margin: 0;
+
   text-align: justify;
 }
 
@@ -20,4 +21,14 @@
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+@media screen and (max-width: 1400px) {
+  .Ipsum {
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .Ipsum {
+    padding: 0 2rem;
+  }
 }

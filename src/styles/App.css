@@ -4,15 +4,18 @@
   height: 100vh;
   margin: 0 auto;
   display: flex;
+  gap: 12rem;
+  justify-content: center;
 }
 .Main {
+  flex-basis: 50%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   min-width: 300px;
   height: 100vh;
-  margin-left: 10vw;
-  margin-right: 10px;
+  /* margin-left: 10vw; */
+  /* margin-right: 10px; */
 }
 .header {
   font-size: 6.4rem;
@@ -21,7 +24,6 @@
   color: var(--color-secondary);
   margin: 0;
 }
-
 .subheader {
   color: var(--color-tertiary);
   font-style: italic;
@@ -65,4 +67,27 @@
 }
 .button-refresh:hover {
   color: var(--color-secondary);
+}
+@media screen and (max-width: 1400px) {
+  .App {
+    gap: 8rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .App {
+    gap: 4rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .Main {
+    align-items: center;
+    flex-basis: auto;
+  }
+  .header {
+    font-size: 4rem;
+  }
+  .subheader,
+  .button__container {
+    text-align: center;
+  }
 }
