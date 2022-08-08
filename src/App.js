@@ -35,7 +35,7 @@ function App() {
       <div className="Main">
         <Navbar activeItem={activeItem} activateItem={activateItem} />
         <div className="header__container">
-          <h1 className="header">Travel Impsum</h1>
+          <h1 className="header">Travel Ipsum</h1>
           <p className="subheader">
             Placeholder text for those who love travel
           </p>
